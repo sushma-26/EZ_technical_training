@@ -1,0 +1,11 @@
+res=[]
+def br(n,s,oc=0,cc=0):
+    if oc==cc==n:
+        res.append(s)
+    if oc<n:
+        br(n,s+'(',oc+1,cc)
+    if cc<oc:
+        br(n,s+")",oc,cc+1)
+    return res
+n=int(input())    
+print(br(n,s=""))     
